@@ -1,60 +1,6 @@
 <?php
 
-function convert_to_gallons($value, $fromUnit) {
-  switch($fromUnit) {
-    case 'buckets':
-      return $value * 4;
-      break;
-    case 'butts':
-      return $value * 108;
-      break;
-    case 'firkins':
-      return $value * 9;
-      break;
-    case 'hogsheads':
-      return $value * 54;
-      break;
-    case 'pints':
-      return $value * 0.125;
-      break;
-    case 'imperial gallons':
-      return $value;
-      break;
-    default:
-      return "Unsupported unit.";
-  }
-}
-
-function convert_from_gallons($value, $toUnit) {
-  switch($toUnit) {
-    case 'buckets':
-      return $value / 4;
-      break;
-    case 'butts':
-      return $value / 108;
-      break;
-    case 'firkins':
-      return $value / 9;
-      break;
-    case 'hogsheads':
-      return $value / 54;
-      break;
-    case 'pints':
-      return $value / 0.125;
-      break;
-    case 'imperial gallons':
-      return $value;
-      break;
-    default:
-      return "Unsupported unit.";
-  }
-}
-
-function convert_volume($value, $fromUnit, $toUnit) {
-  $gallon_value = convert_to_gallons($value, $fromUnit);
-  $new_value = convert_from_gallons($gallon_value, $toUnit);
-  return $new_value;
-}
+include_once("includes/functions.php");
 
 $fromValue = '';
 $fromUnit = '';
@@ -73,15 +19,9 @@ if($_POST['submit']) {
   $toValue = convert_volume($fromValue, $fromUnit, $toUnit);
 }
 
+$pageTitle = "Arcane Liquid Converter";
+include_once("includes/header.php");
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Arcane Volume Converter</title>
-    <link href="styles.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
 
     <div id="main-content">
 
@@ -123,4 +63,5 @@ if($_POST['submit']) {
       
     </div>
   </body>
+<?php include_once("inludes/footer.php"); ?>
 </html>

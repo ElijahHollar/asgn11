@@ -1,4 +1,3 @@
-<?php
 
 <!DOCTYPE html>
 <html>
@@ -8,5 +7,3 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-
-?>

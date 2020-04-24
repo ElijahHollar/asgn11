@@ -40,7 +40,7 @@ const LENGTH_TO_CENTIMETERS = array(
   "fists" => 10.4,
   "feet" => 25,
   "steps" => 62.5,
-  "double-step" => 1500,
+  "double-steps" => 1500,
   "rod" => 3000
 );
 
@@ -62,7 +62,7 @@ function convert_from_centimeters($value, $toUnit) {
   }
 }
 
-function convert_volume($value, $fromUnit, $toUnit) {
+function convert_length($value, $fromUnit, $toUnit) {
   $centimeterValue = convert_to_centimeters($value, $fromUnit);
   $newValue = convert_from_centimeters($centimeterValue, $toUnit);
   return $newValue;

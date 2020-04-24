@@ -13,5 +13,5 @@
   
     </div>
   </body>
-<?= include_once("includes/footer.php"); ?>
+<?php include_once("includes/footer.php"); ?>
 </html>

@@ -24,7 +24,7 @@ if($_POST['submit']) {
 ?>
   <div id="main-content">
 
-    <h1>Outdated Irish Length Converter</h1>
+    <h1>Arcane Liquid Converter</h1>
 
     <form action="" method="post">
       

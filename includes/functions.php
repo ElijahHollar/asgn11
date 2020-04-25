@@ -41,7 +41,7 @@ const LENGTH_TO_CENTIMETERS = array(
   "feet" => 25,
   "steps" => 62.5,
   "double-steps" => 1500,
-  "rod" => 3000
+  "rods" => 3000
 );
 
 function convert_to_centimeters($value, $fromUnit) {
